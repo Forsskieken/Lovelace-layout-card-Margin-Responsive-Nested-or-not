@@ -93,6 +93,10 @@ What I found strange was that altough I only asked to see 9 cards in landscape t
 <img width="535" height="294" alt="image" src="https://github.com/user-attachments/assets/669175c1-c297-414c-ad43-3cfb0190f50a" />
 <img width="315" height="422" alt="image" src="https://github.com/user-attachments/assets/7824e70b-492a-42a9-a83b-f9547affdad0" />
 
+Even with the mod-card and changing the order of only shuffling the last card shows up?
+
+<img width="274" height="530" alt="image" src="https://github.com/user-attachments/assets/517ae0c6-6fef-4c8c-845d-ffc785e705ea" />
+<img width="428" height="626" alt="image" src="https://github.com/user-attachments/assets/b3cee2d5-93e4-463f-b2aa-0887f69ae655" />
 
 
 The complete dashboard code can be found in this repository
