@@ -12,6 +12,13 @@ I made 6 Markdown-card and 6 picture cards.
 
 I found 3 ways to inflict change on the margin: 
 
+
+
+
+
+
+
+
 **1) Layout margin 0px or \-4px**
 
 This method seems to shrink the cards and removes the upper and left margin, unfortunately not the bottom margin   
@@ -30,12 +37,16 @@ This method seems to shrink the cards and removes the upper and left margin, unf
           grid-template-rows: auto
           grid-template-areas: |
 ```
+<img width="1537" height="797" alt="image" src="https://github.com/user-attachments/assets/26e1888f-fc46-4529-960c-31eb671a0846" />
 
+```
+-- layout-margin: 14px 24px 35px 45px  
+```
 
-
-	\- \- layout-margin: 14px 24px 35px 45px  
-\- \- layout-margin: 14px \-24px \-35px 45px **no** **change**  
-	\- \- layout-margin: \-14px 24px 35px \-45px **change**
+```
+-- layout-margin: 14px \-24px \-35px 45px **no** **change**  
+-- layout-margin: \-14px 24px 35px \-45px **change**
+```
 
 **2) the mod-card**  
      
@@ -78,4 +89,10 @@ views:
 
 Option 2 and 3 seems to work, but when switching from portrait to landscape IMG 12 pops up way too big and it shouldn’t even be there.
 
-This is the complete code.
+What I found strange was that altough I only asked to see 9 cards in landscape the last card showed up way to big.
+<img width="535" height="294" alt="image" src="https://github.com/user-attachments/assets/669175c1-c297-414c-ad43-3cfb0190f50a" />
+<img width="315" height="422" alt="image" src="https://github.com/user-attachments/assets/7824e70b-492a-42a9-a83b-f9547affdad0" />
+
+
+
+The complete dashboard code can be found in this repository
