@@ -44,8 +44,8 @@ This method seems to shrink the cards and removes the upper and left margin, unf
 ```
 
 ```
--- layout-margin: 14px \-24px \-35px 45px **no** **change**  
--- layout-margin: \-14px 24px 35px \-45px **change**
+-- layout-margin: 14px -24px -35px 45px no change  
+-- layout-margin: -14px 24px 35px -45px  change
 ```
 
 **2) the mod-card**  
