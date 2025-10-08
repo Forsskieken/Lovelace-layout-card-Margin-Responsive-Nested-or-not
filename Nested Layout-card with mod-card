@@ -1,0 +1,246 @@
+views:
+  - path: default_view
+    title: Home
+    type: panel
+    panel: true
+    layout:
+      max_cols: 4
+      width: 2200px
+      height: 1040px
+    cards:
+      - type: custom:layout-card
+        layout_type: custom:grid-layout
+        layout:
+          gap: 0
+          margin: -4
+          padding: 0
+          card_margin: 0
+          grid-template-columns: repeat(3, 600px)
+          grid-template-rows: repeat (3, 300px)
+          grid-template-areas: |
+            "area41card1 area41card2 area41card3"
+            "area41card4 area41card5 area41card6"
+            "area41card7 area41card8 area41card9"
+          mediaquery:
+            '(max-width: 420px)':
+              grid-template-columns: repeat(1, 412px)
+              grid-template-rows: auto
+              grid-template-areas: |
+                "area41card1"
+                "area41card2"
+                "area41card3"
+                "area41card4"
+                "area41card5"
+                "area41card6"
+                "area41card7"
+                "area41card8"
+                "area41card9"
+            '(max-width: 920px)':
+              grid-template-columns: repeat(2, 440px)
+              grid-template-rows: 1fr
+              grid-template-areas: |
+                "area41card1 area41card2"
+                "area41card3 area41card4"
+                "area41card5 area41card6"
+                "area41card7 area41card8"
+                "area41card9"
+            '(max-width: 1400px)':
+              grid-template-columns: repeat(3, 400px)
+              grid-template-rows: repeat (3, 340px)
+              grid-template-areas: |
+                "area41card1 area41card2 area41card3"
+                "area41card4 area41card5 area41card6"
+                "area41card7 area41card8 area41card9"
+        cards:
+          - type: picture
+            image: /local/car/bitmapbig.png
+            view_layout:
+              grid-area: area41card1
+            card_mod:
+              style: |
+                :host {
+                  --masonry-view-card-margin: 0px;
+                  margin: 0px;
+                  padding: 0px;
+                }
+                ha-card {
+                  /* Use !important to override the parent grid's influence */
+                  width: 410px !important;
+                  height: 100% !important;
+
+                  border: none;
+                }
+                ha-card img {
+                  /* Make the image element fill the card container perfectly */
+                  width: 100%;
+                  height: 100%;
+                  object-fit: fit; /* Stretches image to exact dimensions */
+                }   
+          - type: custom:mod-card
+            style:
+              layout-card$:
+                grid-layout$:
+                  .: |
+                    #root > * {
+                      margin: 0px !important;
+                      overflow: hidden !important;
+                      padding: 0px; !important;
+                    }
+                    :host {
+                      --masonry-view-card-margin: -4px;
+                      overflow: hidden !important;
+                    }
+            card:
+              type: custom:layout-card
+              layout_type: custom:grid-layout
+              view_layout:
+                grid-area: area41card2
+              layout:
+                grid-template-columns: repeat(7, 75px)
+                grid-template-rows: repeat(4, 110px)
+                grid-template-areas: |
+                  "plaats1 plaats1 plaats1 plaats1 plaats1 plaats2 plaats6"
+                  "plaats1 plaats1 plaats1 plaats1 plaats1 plaats3 plaats6"
+                  "plaats1 plaats1 plaats1 plaats1 plaats1 plaats4 plaats6"
+                  "plaats1 plaats1 plaats1 plaats1 plaats1 plaats5 plaats6"
+                mediaquery:
+                  '(max-width: 415px)':
+                    margin: '-5px'
+                    grid-template-columns: repeat(4, 100px)
+                    grid-template-rows: auto
+                    grid-template-areas: |
+                      "plaats1 plaats1 plaats1 plaats1"
+                      "plaats2 plaats4 plaats5 plaats6"
+                      "plaats3 plaats3 plaats3 plaats3"
+                  '(max-width: 920px)':
+                    grid-template-columns: repeat(6, 110px)
+                    grid-template-rows: auto
+                    grid-template-areas: >
+                      "plaats1 plaats1 plaats1 plaats1 plaats2 ."
+
+                      "plaats1 plaats1 plaats1 plaats1 plaats3 ."
+
+                      "plaats1 plaats1 plaats1 plaats1 plaats4
+                      ."                      
+
+                      "plaats1 plaats1 plaats1 plaats1 plaats5 ."
+
+                      "plaats6 plaats6 plaats6 plaats6 plaats6 ."
+                  '(max-width: 1400px)':
+                    grid-template-columns: repeat(6, 80px)
+                    grid-template-rows: auto
+                    grid-template-areas: |
+                      "plaats1 plaats1 plaats1 plaats1 plaats2 plaats3"
+                      "plaats1 plaats1 plaats1 plaats1 plaats4 plaats5"
+                      "plaats1 plaats1 plaats1 plaats1 plaats6 plaats6"
+              cards:
+                - type: markdown
+                  content: |
+                    <div style="line-height: 1; margin: 0; padding: 0;">1</div>
+                  view_layout:
+                    grid-area: plaats1
+                  card_mod:
+                    style: |
+                      ha-card {
+                        height: 100% !important;
+                        width: 100% !important;
+                        border: 6px solid black !important;
+                        display: flex !important;
+                        justify-content: center !important;
+                        align-items: center !important;
+                        font-size: 36px !important;
+                        font-weight: bold !important;
+                        overflow: hidden !important;
+                        card_margin: 0px
+                      }                
+                - type: markdown
+                  content: |
+                    <div style="line-height: 1; margin: 0; padding: 0;">2</div>
+                  view_layout:
+                    grid-area: plaats2
+                  card_mod:
+                    style: |
+                      ha-card {
+                        height: 100% !important;
+                        width: 100% !important;
+                        border: 6px solid black !important;
+                        display: flex !important;
+                        justify-content: center !important;
+                        font-size: 36px !important;
+                        font-weight: bold !important;
+                        overflow: hidden !important;
+                        card_margin: 0px
+                      }                
+                - type: markdown
+                  content: |
+                    <div style="line-height: 1; margin: 0; padding: 0;">3</div>
+                  view_layout:
+                    grid-area: plaats3
+                  card_mod:
+                    style: |
+                      ha-card {
+                        height: 100% !important;
+                        width: 100% !important;
+                        border: 6px solid black !important;
+                        display: flex !important;
+                        justify-content: center !important;
+                        align-items: center !important;
+                        font-size: 36px !important;
+                        font-weight: bold !important;
+                        overflow: hidden !important;
+                        card_margin: 0px
+                      }                
+                - type: picture
+                  image: /local/car/aimg4.png
+                  view_layout:
+                    grid-area: plaats4
+                  card_mod:
+                    style: |
+                      ha-card {
+                        height: 100% !important;
+                        width: 100% !important;
+                        padding: 0;
+                        border: none;
+                        border-radius: 0;
+                      }
+                      ha-card img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: fill;
+                      }
+                - type: picture
+                  image: /local/car/aimg5.png
+                  view_layout:
+                    grid-area: plaats5
+                  card_mod:
+                    style: |
+                      ha-card {
+                        height: 100% !important;
+                        width: 100% !important;
+                        padding: 0;
+                        border: none;
+                        border-radius: 0;
+                      }
+                      ha-card img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: fill;
+                      }
+                - type: picture
+                  image: /local/car/aimg6.png
+                  view_layout:
+                    grid-area: plaats6
+                  card_mod:
+                    style: |
+                      ha-card {
+                        height: 100% !important;
+                        width: 100% !important;
+                        padding: 0;
+                        border: none;
+                        border-radius: 0;
+                      }
+                      ha-card img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: fill;
+                      }
